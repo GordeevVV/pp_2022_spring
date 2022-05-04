@@ -128,7 +128,6 @@ MultMatrix MultMatrix::multMatrixParallel(const MultMatrix &mtx) {
             to += remains;
             k = i;
         }
-
         threads.push_back(std::thread(
                 [from, to, this, &mtx, &res]() {
                     std::complex<int> tmp;
